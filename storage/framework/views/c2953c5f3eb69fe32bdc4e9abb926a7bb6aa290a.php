@@ -1,12 +1,11 @@
-@extends('admin.main')
-@section('insertView')
+<?php $__env->startSection('insertView'); ?>
 <h3 class="card-title " style="margin: 5px 6px;">Danh sách</h3>
 <div class="row">
     <div class="col-lg-4 col-6">
         <!-- small box -->
         <div class="small-box bg-info">
             <div style="background-color: red;" class="inner">
-                <h3>{{$totalOrder}}</h3>
+                <h3><?php echo e($totalOrder); ?></h3>
 
                 <p>Tổng số đơn hàng</p>
             </div>
@@ -21,7 +20,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
             <div style="background-color: #fcba03;" class="inner">
-                <h3>{{$totalUser}}</h3>
+                <h3><?php echo e($totalUser); ?></h3>
 
                 <p>Tổng số tài khoản</p>
             </div>
@@ -36,7 +35,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
             <div style="background-color: #00d90e;" class="inner">
-                <h3>{{$totalProduct}}</h3>
+                <h3><?php echo e($totalProduct); ?></h3>
 
                 <p>Tổng số sản phẩm</p>
             </div>
@@ -51,7 +50,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
             <div style="background-color: #0810fc;" class="inner">
-                <h3>{{$totalWaitOrder}}</h3>
+                <h3><?php echo e($totalWaitOrder); ?></h3>
 
                 <p>Tổng số đơn hàng chưa hoàn thành</p>
             </div>
@@ -66,7 +65,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
             <div style="background-color: #8119ff;" class="inner">
-                <h3>{{$totalFeedback}}</h3>
+                <h3><?php echo e($totalFeedback); ?></h3>
 
                 <p>Tổng số phản hồi đơn hàng</p>
             </div>
@@ -256,5 +255,7 @@ $(document).ready(function() {
     });
 });
 </script>
-{!!$adminminilink!!}
-@endsection
+<?php echo $adminminilink; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /workspace/PureHealthTT/resources/views/admin/dashboard.blade.php ENDPATH**/ ?>
