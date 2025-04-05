@@ -4,7 +4,7 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://openfxt.vercel.app/images/favicon.png">
 <!-- Material Design Iconic Font-V2.2.0 -->
 <link rel="stylesheet" href="/template/customer/css/material-design-iconic-font.min.css">
 <!-- Font Awesome -->

@@ -10,6 +10,6 @@
 <link rel="stylesheet" href="/template/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="/template/admin/dist/css/adminlte.min.css">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://openfxt.vercel.app/images/favicon.png">
 <link rel="stylesheet" href="/template/admin/style.css">
 <meta name="csrf-token" content="{{ csrf_token() }}">

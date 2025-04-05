@@ -96,9 +96,9 @@ jobs:
 
       - name: Create .htaccess file
         run: |
-          echo "<IfModule mod_rewrite.c>" >> .htaccess
+          echo "<IfModule mod_rewrite.c>" > .htaccess
           echo "    RewriteEngine On" >> .htaccess
-          echo "    RewriteRule ^(.*)$ public/$1 [L]" >> .htaccess
+          echo "    RewriteRule ^(.*)$ public/\$1 [L]" >> .htaccess
           echo "</IfModule>" >> .htaccess
 
       - name: Copy to hosting
