@@ -69,7 +69,7 @@ jobs:
           echo "MAIL_HOST=smtp.gmail.com" >> .env
           echo "MAIL_PORT=587" >> .env
           echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> .env
-          echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> .env
+          echo "MAIL_PASSWORD=\"${{ secrets.MAIL_PASSWORD }}\"" >> .env
           echo "MAIL_ENCRYPTION=tls" >> .env
           echo "MAIL_FROM_ADDRESS=${{ secrets.MAIL_FROM_ADDRESS }}" >> .env
           echo "MAIL_FROM_NAME=\"PureHealthTT\"" >> .env
@@ -123,4 +123,5 @@ jobs:
           port: 22
           script: |
             cd ~/public_html
+            rm -f public/storage
             php artisan storage:link
