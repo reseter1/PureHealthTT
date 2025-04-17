@@ -30,7 +30,7 @@ PureHealthTT là một trang thương mại điện tử đơn giản bán thự
 
 ## Yêu cầu hệ thống
 
-- PHP >= 7.4
+- PHP >= 8.0
 - Composer
 - MySQL/MariaDB
 
