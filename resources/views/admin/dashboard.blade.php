@@ -205,7 +205,7 @@ $(document).ready(function() {
     let requestString3 = <?php echo json_encode($requestString3); ?>;
 
     $.ajax({
-        url: 'https://genai-reseter.servernux.com/api/v2/ai-gen',
+        url: 'https://genai.reseter.space/api/v2/ai-gen',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -222,7 +222,7 @@ $(document).ready(function() {
     });
 
     $.ajax({
-        url: 'https://genai-reseter.servernux.com/api/v2/ai-gen',
+        url: 'https://genai.reseter.space/api/v2/ai-gen',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -239,7 +239,7 @@ $(document).ready(function() {
     });
 
     $.ajax({
-        url: 'https://genai-reseter.servernux.com/api/v2/ai-gen',
+        url: 'https://genai.reseter.space/api/v2/ai-gen',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
