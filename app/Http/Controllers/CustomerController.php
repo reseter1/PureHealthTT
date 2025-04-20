@@ -36,7 +36,7 @@ class CustomerController extends Controller
         $getBestDiscountProduct = $this->customerService->getSliderProduct(10);
         $getNewProduct = $this->customerService->getNewProduct(10);
         return view('customer.home', [
-            'title' => 'PureHealthTT - Trang chủ',
+            'title' => 'Reseter | PureHealthTT',
             'sliderProducts' => $getSliderProduct,
             'newProducts' => $getNewProduct,
             'avrgRateNewProducts' =>  $this->customerService->getAvgRate($getNewProduct),
