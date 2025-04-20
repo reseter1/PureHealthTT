@@ -128,7 +128,7 @@ jobs:
             rm -f public/storage
             php artisan storage:link
 
-      - name: Restart Apache
+      - name: Restart permission Apache and restart Apache
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -136,6 +136,8 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
+            chown -R www-data:www-data /var/www/ECShop
+            chmod -R 755 /var/www/ECShop
             systemctl restart apache2
             echo "Apache restarted successfully"
 
