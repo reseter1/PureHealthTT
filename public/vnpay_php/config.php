@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 $vnp_TmnCode = "COGGW4SF"; //Website ID in VNPAY System
 $vnp_HashSecret = "U6QF7TRH40DGY39WSJXLOU13S2E1UGTP"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-$vnp_Returnurl = "https://purehealthtt.zoneitshop.com/customer/checkout-result";
+$vnp_Returnurl = "https://purehealth.reseter.space/customer/checkout-result";
 $vnp_apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 //Config input format
 //Expire
