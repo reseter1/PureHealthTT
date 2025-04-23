@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://openfxt.vercel.app/images/favicon.png" alt="ChatGPT Plus Logo" width="200">
+</div>
+
 # PureHealthTT
 
 ## Introduction
