@@ -1,40 +1,38 @@
 # PureHealthTT
 
-## Giới thiệu
+## Introduction
 
-PureHealthTT là một trang thương mại điện tử đơn giản bán thực phẩm rau củ quả được xây dựng dựa trên Laravel với đầy đủ các tính năng cần thiết.
+Welcome to **PureHealthTT**, a simple yet powerful e-commerce platform designed to sell fresh produce. This project is the result of my graduation internship, built using Laravel to offer a seamless shopping experience with all the essential features.
 
-## Tính năng chính
+## Key Features
 
-- Đăng ký, đăng nhập.
-- Quản lý sản phẩm.
-- Quản lý đơn hàng.
-- Quản lý khách hàng.
-- Tìm kiếm sản phẩm.
-- Thêm vào giỏ hàng.
-- Thanh toán.
-- Quản lý đơn hàng.
-- Quản lý khách hàng.
-- Tìm kiếm sản phẩm.
-- Đánh giá sản phẩm.
-- Quản lý báo cáo.
-- Nhiều hơn nữa...
+- User Registration and Login
+- Product Management
+- Order Management
+- Customer Management
+- Product Search
+- Add to Cart
+- Secure Checkout
+- Product Reviews
+- Report Management
+- And much more...
 
+## Technologies Used
 
-## Công nghệ
+- **PHP** with Laravel
+- **MySQL** database
+- **JavaScript/jQuery**
+- **Bootstrap** for responsive design
 
-- PHP Laravel
-- MySQL
-- JavaScript/jQuery
-- Bootstrap
-
-## Yêu cầu hệ thống
+## System Requirements
 
 - PHP >= 8.0
 - Composer
-- MySQL/MariaDB
+- MySQL or MariaDB
 
-## Cài đặt
+## Installation
+
+To get started, clone the repository and set up the environment:
 
 ```bash
 git clone https://github.com/reseter1/PureHealth.git
@@ -52,28 +50,28 @@ php artisan serve
 
 ## Demo
 
-Dưới đây là một số hình ảnh demo của hệ thống:
+Below are some screenshots showcasing the system:
 
-### Giao diện trang chủ
-![Trang chủ](screenshots/home.png)
+### Home Page
+![Home](screenshots/home.png)
 
-### Giao diện đăng ký
-![Đăng ký](screenshots/register.png)
+### Registration Page
+![Register](screenshots/register.png)
 
-### Giao diện đăng nhập
-![Đăng nhập](screenshots/login.png)
+### Login Page
+![Login](screenshots/login.png)
 
-### Giao diện chi tiết sản phẩm
-![Chi tiết sản phẩm](screenshots/product-detail.png)
+### Product Detail Page
+![Product Detail](screenshots/product-detail.png)
 
-### Giao diện giỏ hàng
-![Giỏ hàng](screenshots/cart.png)
+### Cart Page
+![Cart](screenshots/cart.png)
 
-## Giao diện quản trị
-![Quản trị](screenshots/admin-dashboard.png)
+## Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
-### Quản lý sản phẩm
-![Quản lý sản phẩm](screenshots/product-management.png)
+### Product Management
+![Product Management](screenshots/product-management.png)
 
-### Thống kê báo cáo
-![Thống kê](screenshots/statistics.png)
+### Report & Analytics
+![Statistics](screenshots/statistics.png)
