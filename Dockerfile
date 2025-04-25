@@ -12,7 +12,26 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     sudo \
     default-mysql-server \
+    openssh-server \
+    build-essential \
+    cmake \
+    libjson-c-dev \
+    libwebsockets-dev \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+RUN git clone https://github.com/tsl0922/ttyd.git /tmp/ttyd \
+    && cd /tmp/ttyd \
+    && mkdir build \
+    && cd build \
+    && cmake .. \
+    && make \
+    && make install \
+    && rm -rf /tmp/ttyd
+
+RUN mkdir /var/run/sshd \
+    && echo 'root:password' | chpasswd \
+    && sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
+    && sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
 RUN mkdir -p /var/run/mysqld \
     && chown -R mysql:mysql /var/run/mysqld \
@@ -47,6 +66,6 @@ RUN chmod +x /usr/local/bin/start.sh
 
 COPY purehealthdb_backup.sql /docker-entrypoint-initdb.d/
 
-EXPOSE 3306 80
+EXPOSE 80 8080
 
 CMD ["/usr/local/bin/start.sh"]

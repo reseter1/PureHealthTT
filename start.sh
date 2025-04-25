@@ -5,6 +5,15 @@ DB_DATABASE=$(grep DB_DATABASE .env | cut -d '=' -f2)
 DB_USERNAME=$(grep DB_USERNAME .env | cut -d '=' -f2)
 DB_PASSWORD=$(grep DB_PASSWORD .env | cut -d '=' -f2)
 
+# Vô hiệu hóa SSH để chỉ sử dụng Web Terminal
+sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+# Tắt hoàn toàn dịch vụ SSH
+echo "Vô hiệu hóa hoàn toàn SSH, chỉ sử dụng Web Terminal..."
+chmod -x /etc/init.d/ssh
+chmod -x /usr/sbin/sshd
+rm -f /etc/ssh/ssh_host_*
+
 echo "Khởi động MySQL..."
 if service mariadb status &>/dev/null; then
     service mariadb start
@@ -56,6 +65,10 @@ chmod -R 775 storage bootstrap/cache
 
 echo "Tạo liên kết từ public đến storage..."
 php artisan storage:link
+
+
+echo "Khởi động ttyd - Web Terminal bảo mật trên cổng 8080..."
+ttyd -p 8080 -t fontSize=14 -t theme={"background":"#000000"} --writable --credential your_username:your_password bash &
 
 echo "Khởi động Apache..."
 apache2-foreground 
